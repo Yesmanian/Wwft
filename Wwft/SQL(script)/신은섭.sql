@@ -1,4 +1,7 @@
 SELECT * FROM tree;
+SELECT * FROM bucketList;
+
+DESC bucketList;
 DESC tree;
 
 //addBucketList 
@@ -12,3 +15,7 @@ INSERT
 	   	set
 	   	 family_motto = '바르게살자'
 	   	WHERE tree_no = 9;
+	   	
+//removeBucketList
+DELETE tree 
+WHERE family_motto = '바르게살자'

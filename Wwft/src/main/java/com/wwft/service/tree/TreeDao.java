@@ -23,7 +23,7 @@ public interface TreeDao {
 	
 	public Tree getTreeGrowth(int treeNo) throws Exception;
 	
-	public Tree getBucketList() throws Exception;
+	public Tree getBucketList(int treeNo) throws Exception;
 	
 	public void addBucketList(Tree tree) throws Exception;
 	
@@ -31,8 +31,6 @@ public interface TreeDao {
 	
 	public void removeBucketList(Tree tree) throws Exception;
 	
-	public void confirmBucketList(Tree tree) throws Exception;
-
 	public Calender getCalender(int treeNo) throws Exception;
 
 	public void searchTreeAndForest() throws Exception;

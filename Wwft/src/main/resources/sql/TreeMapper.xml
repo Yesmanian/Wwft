@@ -32,20 +32,15 @@
 	 <update	id="updateFamilyMotto"	parameterType="tree" >
 	   	UPDATE tree
 	   	<set>
-	   	 family_motto = #{familyMotto:VARCHAR}
+	   	 family_motto = #{familyMotto}
 	   	</set>
 	   	WHERE tree_no = #{treeNo}
 	 </update>
 	 
 	 
 	 <!-- SQL : DELETE -->
-	 <delete id="deleteFamilyMotto" parameterType="tree">
-	  	DELETE tree
-	  	<set>
-	  	
-	  	
-	  	</set>
-	 
+	 <delete id="deleteFamilyMotto" parameterType="String">
+	  	DELETE tree WHERE family_motto = #{familyMotto}
 	 </delete> 	 
 		 
 	<!-- SQL : SELECT LIST -->
