@@ -6,7 +6,10 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.wwft.service.calender.EventService;
@@ -36,6 +39,16 @@ public class CalenderRestController {
 		
 		
 		return map;
+	}
+	
+	@RequestMapping( value = "json/addEvent", method = RequestMethod.POST)
+	public String addEvent(@RequestBody() Event event) throws Exception{
+		System.out.println("addEvent: POST");
+		System.out.println(event);
+		
+		eventService.addEvent(event);
+		
+		return null;
 	}
 
 }

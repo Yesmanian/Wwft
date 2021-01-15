@@ -24,8 +24,8 @@
 	<insert 	id="addEvent"		parameterType="event" >
 	 	INSERT
 		INTO calender(event_no, tree_no,event_title, event_start_date, event_end_date, d_day_state,event_detail)
-		VALUES	 (seq_event_no.nextval,	#{treeNo}, #{title:VARCHAR}, to_date(#{start:DATE}, 'YYYY-MM-DD hh24:mi:ss') 
-										,to_date(#{end:DATE}, 'YYYY-MM-DD hh24:mi:ss'), #{dDay:CHAR}, #{eventDetail:VARCHAR} )
+		VALUES	 (seq_event_no.nextval,	#{treeNo}, #{title:VARCHAR}, to_date(#{start}, 'YYYY-MM-DD hh24:mi:ss') 
+										,to_date(#{end}, 'YYYY-MM-DD hh24:mi:ss'), #{dDay:CHAR}, #{eventDetail:VARCHAR} )
 	 </insert>
 	 
 	 <select id="getEventList" resultMap="evntSelectMap">
