@@ -8,15 +8,14 @@
  	
  	
 	<resultMap id="userSelectMap" type="user">
-		<result property="userId" 			column="user_id" 			jdbcType="VARCHAR"/>
-		<result property="userName"	column="user_name" 		jdbcType="VARCHAR" />
-		<result property="password" 	column="password" 		jdbcType="VARCHAR" />
-		<result property="role" 				column="role" 					jdbcType="VARCHAR" />
-		<result property="ssn" 				column="ssn" 					jdbcType="VARCHAR" />
-		<result property="phone" 			column="cell_phone" 		jdbcType="VARCHAR" />
-		<result property="addr" 				column="addr" 					jdbcType="VARCHAR" />
-		<result property="email" 			column="email" 				jdbcType="NUMERIC"  />
-		<result property="regDate" 		column="reg_date" 			jdbcType="DATE" />
+		<result property="userId" 					column="USER_ID" 					jdbcType="VARCHAR2"/>
+		<result property="password"					column="PASSWORD" 					jdbcType="VARCHAR2" />
+		<result property="treeno" 					column="TREE_NO" 					jdbcType="NUMBER" />
+		<result property="email" 					column="EMAIL" 						jdbcType="VARCHAR2" />
+		<result property="role" 					column="ROLE" 						jdbcType="VARCHAR2" />
+		<result property="userregdate" 				column="USER_REG_DATE" 				jdbcType="DATE" />
+		<result property="userwithdrawregdate" 		column="USER_WITHDRAW_REG_DATE" 	jdbcType="DATE" />
+		<result property="userstate" 				column="USER_STATE" 				jdbcType="CHAR"  />
 	</resultMap>
 	
 	<!-- SQL : INSERT -->
